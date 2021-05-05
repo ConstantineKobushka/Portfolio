@@ -89,17 +89,19 @@ a {
 .portfolio__cart {
   box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
   margin-bottom: 60px;
-  transition: all 0.3s;
+  transition: all 0.5s;
+  /* ! */
   position: relative;
+  text-align: center;
+}
+.portfolio__cart:hover {
+  transform: scale(1.05);
 }
 .portfolio__cart-link {
   display: block;
   padding: 20px 20px 30px;
   box-shadow: 0px 10px 40px rgb(126 155 189 / 35%);
   border-radius: 5px;
-}
-.portfolio__cart:hover {
-  transform: scale(1.1);
 }
 .portfolio__cart-img {
   box-shadow: 0px 10px 40px rgb(126 155 189 / 35%);
@@ -118,13 +120,27 @@ a {
 }
 .portfolio__cart-hover-text {
   font-weight: 600;
-  font-size: 22px;
-  line-height: 32px;
+  font-size: 40px;
+  line-height: 60px;
   box-shadow: 0px 10px 40px rgb(126 155 189 / 35%);
   width: 100%;
   margin-left: auto;
   padding: 15px;
-  text-align: center;
+  /* ! */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(255 255 255 / 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.portfolio__cart:hover .portfolio__cart-hover-text {
+  opacity: 1;
 }
 
 .footer {
